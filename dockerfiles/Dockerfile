@@ -1,0 +1,6 @@
+FROM offlineregistry.dataman-inc.com/centos7/base:20160325175751
+
+RUN mkdir -p /go/
+ADD ./bin.tar.gz /go/
+WORKDIR /go/bin/
+ENTRYPOINT ["/go/bin/harbor_jobservice"]
